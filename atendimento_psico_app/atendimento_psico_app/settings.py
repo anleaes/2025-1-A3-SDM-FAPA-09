@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'apps.pacientes',
     'apps.atendimentos',
     'apps.medicamentos',
+    'apps.prescricoes',
     
 ]
 
