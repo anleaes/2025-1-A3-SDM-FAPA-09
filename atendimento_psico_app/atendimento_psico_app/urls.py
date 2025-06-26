@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('categorias/', include('categories.urls', namespace='categories')),  
+=======
+>>>>>>> parent of 8dba78f (Merge pull request #3 from EnzoD9/products)
 ]
