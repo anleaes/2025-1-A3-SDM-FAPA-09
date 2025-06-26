@@ -7,3 +7,5 @@ modeloapp/__pycache__/*
 /apps/pacientes/migrations/*
 /apps/atendimento/__pycache__/*
 /apps/atendimento/migrations/*
+/apps/medicamentos/__pycache__/*
+/apps/medicamentos/migrations/*
