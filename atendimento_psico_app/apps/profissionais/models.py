@@ -17,6 +17,8 @@ class Profissional(models.Model):
     name = models.CharField(max_length=100)
     cell_phone = models.CharField(max_length=15)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    
+    photo = models.ImageField('Foto do Profissional', upload_to='photos/profissionais')
 
     def __str__(self):
         return self.name

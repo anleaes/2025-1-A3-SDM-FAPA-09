@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +29,6 @@ urlpatterns = [
     path('api/medicamentos/', include('apps.medicamentos.urls')),
     path('api/prescricoes/', include('apps.prescricoes.urls')),
 ]
+
+# declarar a pasta caminho e raiz para arquivos que sera enviados atraves de forms de upload.
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
