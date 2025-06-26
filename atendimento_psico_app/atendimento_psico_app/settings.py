@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'categories.apps.CategoriesConfig',
+    'apps.categories',
     'apps.profissionais',
     'apps.pacientes',
     'apps.atendimentos',
