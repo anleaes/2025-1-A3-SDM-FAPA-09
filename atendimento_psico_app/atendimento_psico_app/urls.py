@@ -23,4 +23,5 @@ urlpatterns = [
     path('categorias/', include('categories.urls', namespace='categories')),  
     path('api/profissionais/', include('apps.profissionais.urls')),
     path('api/pacientes/', include('apps.pacientes.urls')),
+    path('api/atendimentos/', include('apps.atendimentos.urls')),
 ]

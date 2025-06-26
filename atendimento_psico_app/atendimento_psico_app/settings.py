@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'categories.apps.CategoriesConfig',
     'apps.profissionais',
     'apps.pacientes',
+    'apps.atendimentos',
     
 ]
 

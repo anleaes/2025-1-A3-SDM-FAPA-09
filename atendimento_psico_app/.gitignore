@@ -5,3 +5,5 @@ modeloapp/__pycache__/*
 /apps/profissionais/migrations/*
 /apps/pacientes/__pycache__/*
 /apps/pacientes/migrations/*
+/apps/atendimento/__pycache__/*
+/apps/atendimento/migrations/*
