@@ -9,3 +9,5 @@ modeloapp/__pycache__/*
 /apps/atendimento/migrations/*
 /apps/medicamentos/__pycache__/*
 /apps/medicamentos/migrations/*
+/apps/prescricoes/__pycache__/*
+/apps/prescricoes/migrations/*

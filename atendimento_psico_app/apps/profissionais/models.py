@@ -25,6 +25,9 @@ class Profissional(models.Model):
 class ProfissionalEspecialidade(models.Model):
     profissional = models.ForeignKey(Profissional, on_delete=models.CASCADE)
     especialidade = models.ForeignKey(Especialidade, on_delete=models.CASCADE)
+    
+    class Meta:
+        unique_together = ('profissional', 'especialidade')
 
     def __str__(self):
         return f"{self.profissional.name} - {self.especialidade.name}"
