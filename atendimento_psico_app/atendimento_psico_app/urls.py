@@ -22,12 +22,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/categories/', include('apps.categories.urls')),
-    path('api/profissionais/', include('apps.profissionais.urls')),
-    path('api/pacientes/', include('apps.pacientes.urls')),
-    path('api/atendimentos/', include('apps.atendimentos.urls')),
-    path('api/medicamentos/', include('apps.medicamentos.urls')),
-    path('api/prescricoes/', include('apps.prescricoes.urls')),
+    path('categorias/', include('categories.urls', namespace='categories')),  
+    path('profissionais/', include('profissionais.urls', namespace='profissionais')),
+    path('pacientes/', include('pacientes.urls', namespace='pacientes')),
+    path('atendimentos/', include('atendimentos.urls', namespace='atendimentos')),
+    path('medicamentos/', include('medicamentos.urls', namespace='medicamentos')),
+    path('prescricoes/', include('prescricoes.urls', namespace='prescricoes')),
 ]
 
 # declarar a pasta caminho e raiz para arquivos que sera enviados atraves de forms de upload.

@@ -1,11 +1,14 @@
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import EspecialidadeViewSet, ProfissionalViewSet, ProfissionalEspecialidadeViewSet
+from . import views
+from rest_framework import routers
 
-router = DefaultRouter()
-router.register(r'especialidades', EspecialidadeViewSet)
-router.register(r'profissionais', ProfissionalViewSet)
-router.register(r'profissional-especialidades', ProfissionalEspecialidadeViewSet)
+app_name = 'profissionais'
+
+router = routers.DefaultRouter()
+router.register('', views.EspecialidadeViewSet, basename='especialidade'),
+router.register('', views.ProfissionalViewSet, basename='profissionais'),
+router.register('', views.ProfissionalEspecialidadeViewSet, basename='profissionalespecialidade'),
+
 
 urlpatterns = [
     path('', include(router.urls)),

@@ -1,6 +1,6 @@
 from django.db import models
-from apps.profissionais.models import Profissional
-from apps.pacientes.models import Paciente
+from profissionais.models import Profissional
+from pacientes.models import Paciente
 # Create your models here.
 
 
@@ -12,6 +12,11 @@ class Atendimento(models.Model):
 
     def __str__(self):
         return f"{self.profissional} - {self.cliente} - {self.data}"
+    
+    class Meta:
+        verbose_name = 'Atendimentos'
+        verbose_name_plural = 'Atendimentos'
+        ordering =['id']
     
     def clean(self):
         from django.core.exceptions import ValidationError

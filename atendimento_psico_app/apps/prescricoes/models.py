@@ -1,6 +1,6 @@
 from django.db import models
-from apps.atendimentos.models import Atendimento
-from apps.medicamentos.models import Medicamento
+from atendimentos.models import Atendimento
+from medicamentos.models import Medicamento
 # Create your models here.
 
 class Prescricao(models.Model):
@@ -10,6 +10,11 @@ class Prescricao(models.Model):
     atendimento = models.ForeignKey(Atendimento, on_delete=models.CASCADE)
     
     doc = models.FileField('Documentos', upload_to='docs')
+    
+    class Meta:
+        verbose_name = 'Prescricoes'
+        verbose_name_plural = 'Prescricoes'
+        ordering =['id']
 
     def __str__(self):
         return f"{self.name} - {self.atendimento}"
