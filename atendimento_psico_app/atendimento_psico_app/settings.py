@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'apps.atendimentos',
     'apps.medicamentos',
     'apps.prescricoes',
+    'corsheaders',
     
 ]
 
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'atendimento_psico_app.urls'
@@ -138,3 +140,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # armazenamento arquivos que serao enviados atraves do upload do sistema. .
 MEDIA_URL = '/media/' 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# CORS (Cross-Origin Resource Sharing) é um mecanismo de 
+# segurança implementado pelos navegadores que permite (ou bloqueia)
+# requisições feitas por páginas web a recursos hospedados 
+# em domínios diferentes do domínio de origem (o chamado “cross-origin”).
+CORS_ALLOW_ALL_ORIGINS = True
