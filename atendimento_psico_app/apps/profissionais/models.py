@@ -3,6 +3,11 @@ from django.db import models
 class Especialidade(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
+    
+    class Meta:
+        verbose_name = 'Especialidade'
+        verbose_name_plural = 'Especialidade'
+        ordering =['id']
 
     def __str__(self):
         return self.name
@@ -19,6 +24,11 @@ class Profissional(models.Model):
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     
     photo = models.ImageField('Foto do Profissional', upload_to='photos/profissionais')
+    
+    class Meta:
+        verbose_name = 'Profissionais'
+        verbose_name_plural = 'Profissionais'
+        ordering =['id']
 
     def __str__(self):
         return self.name

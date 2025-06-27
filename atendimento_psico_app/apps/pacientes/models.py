@@ -14,6 +14,11 @@ class Paciente(models.Model):
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     
     photo = models.ImageField('Foto do Paciente', upload_to='photos/pacientes')
+    
+    class Meta:
+        verbose_name = 'Pacientes'
+        verbose_name_plural = 'Pacientes'
+        ordering =['id']
 
     def __str__(self):
         return self.name

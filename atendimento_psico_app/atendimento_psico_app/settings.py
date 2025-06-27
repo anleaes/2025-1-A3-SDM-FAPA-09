@@ -42,12 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'apps.categories',
-    'apps.profissionais',
-    'apps.pacientes',
-    'apps.atendimentos',
-    'apps.medicamentos',
-    'apps.prescricoes',
+    'categories.apps.CategoriesConfig',
+    'profissionais.apps.ProfissionaisConfig',
+    'pacientes.apps.PacienteConfig',
+    'atendimentos.apps.AtendimentosConfig',
+    'medicamentos.apps.MedicamentosConfig',
+    'prescricoes.apps.PrescricoesConfig',
     'corsheaders',
     
 ]
