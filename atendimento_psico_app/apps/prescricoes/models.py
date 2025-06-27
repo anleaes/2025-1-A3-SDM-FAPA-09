@@ -8,6 +8,8 @@ class Prescricao(models.Model):
     description = models.TextField()
     total_medicamento = models.IntegerField()
     atendimento = models.ForeignKey(Atendimento, on_delete=models.CASCADE)
+    
+    doc = models.FileField('Documentos', upload_to='docs')
 
     def __str__(self):
         return f"{self.name} - {self.atendimento}"

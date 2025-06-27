@@ -12,6 +12,8 @@ class Paciente(models.Model):
     cell_phone = models.CharField(max_length=15)
     email = models.EmailField(unique=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    
+    photo = models.ImageField('Foto do Paciente', upload_to='photos/pacientes')
 
     def __str__(self):
         return self.name
